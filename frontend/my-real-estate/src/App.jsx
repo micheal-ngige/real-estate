@@ -9,6 +9,8 @@ import ListingDetails from "./containers/ListingDetails";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
 import NotFound from "./components/NotFound";
+import './sass/main.scss';
+
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
           <Route path="/listings/:id" element={<ListingDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </Router>
