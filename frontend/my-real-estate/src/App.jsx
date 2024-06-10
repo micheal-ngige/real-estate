@@ -11,9 +11,12 @@ import Login from "./containers/Login";
 import NotFound from "./components/NotFound";
 import './sass/main.scss';
 
+import {Provider } from 'react-redux';
+import store from './store';
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <Layout>
         <Routes>
@@ -28,6 +31,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </Provider>
   );
 }
 
