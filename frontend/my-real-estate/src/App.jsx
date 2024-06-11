@@ -9,28 +9,32 @@ import ListingDetails from "./containers/ListingDetails";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
 import NotFound from "./components/NotFound";
-import './sass/main.scss';
+import PrivateRoute from "./components/PrivateRoute";
+import "./sass/main.scss";
 
-import {Provider } from 'react-redux';
-import store from './store';
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
     <Provider store={store}>
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/listings" element={<Listings />} />
-          <Route path="/listings/:id" element={<ListingDetails />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-    </Router>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/listings" element={<Listings />} />
+            <Route
+              path="/listings/:id"
+              element={<PrivateRoute element={ListingDetails} />}
+            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </Router>
     </Provider>
   );
 }

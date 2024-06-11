@@ -18,7 +18,7 @@ const About = () => {
     const getTopSeller = async () => {
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/realtors/topseller`,
+         "http://localhost:8000/api/realtors/topseller",
           config
         );
         setTopSeller(res.data);
@@ -38,7 +38,7 @@ const About = () => {
     const getRealtors = async () => {
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/realtors/`,
+          "http://localhost:8000/api/realtors/",
           config
         );
         setRealtors(res.data);
@@ -107,11 +107,11 @@ const About = () => {
   return (
     <main className="about">
       <Helmet>
-        <title>Realest Estate - About</title>
+        <title>Real Estate - About</title>
         <meta name="description" content="About us" />
       </Helmet>
       <header className="about__header">
-        <h1 className="about__heading">About Realest Estate</h1>
+        <h1 className="about__heading">About Real Estate</h1>
       </header>
       <section className="about__info">
         <div className="row">
