@@ -56,7 +56,7 @@ const Contact = ({ setAlert }) => {
   return (
     <div className="contact">
       <Helmet>
-        <title>Realest Estate - Contact</title>
+        <title>Real Estate - Contact</title>
         <meta name="description" content="Contact us" />
       </Helmet>
       <form className="contact__form" onSubmit={(e) => onSubmit(e)}>
