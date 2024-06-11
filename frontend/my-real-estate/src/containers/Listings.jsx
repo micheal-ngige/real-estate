@@ -16,9 +16,7 @@ const Listings = () => {
 
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/listings/?page=1`
-        );
+        const res = await axios.get("http://localhost:8000/api/listings/1")
 
         setListings(res.data.results);
         setCount(res.data.count);
@@ -72,7 +70,7 @@ const Listings = () => {
 
   const visitPage = (page) => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/listings/?page=${page}`)
+      .get(`${process.env.REACT_APP_API_URL} /api/listings/?page=${page}`)
       .then((res) => {
         setListings(res.data.results);
         setPrevious(res.data.previous);

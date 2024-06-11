@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -22,12 +22,12 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
-  if (isAuthenticated) return <Redirect to="/" />;
+  if (isAuthenticated) return <Navigate to="/" />;
 
   return (
     <div className="auth">
       <Helmet>
-        <title>Realest Estate - Login</title>
+        <title>Real Estate - Login</title>
         <meta name="description" content="login page" />
       </Helmet>
       <h1 className="auth__title">Sign In</h1>

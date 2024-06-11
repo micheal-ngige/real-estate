@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 import { connect } from "react-redux";
 import { setAlert } from "../actions/alert";
-import Loader from "react-loader-spinner";
+import { Oval } from "react-loader-spinner"; // Importing the named export
 import PropTypes from "prop-types";
 
 const Contact = ({ setAlert }) => {
@@ -110,10 +110,11 @@ const Contact = ({ setAlert }) => {
         />
         {loading ? (
           <div className="contact__form__loader">
-            <Loader type="Oval" color="#424242" height={50} width={50} />
+            <Oval color="#424242" height={50} width={50} />{" "}
+            {/* Using the named import */}
           </div>
         ) : (
-          <button className="contact__form__button" htmltype="submit">
+          <button className="contact__form__button" type="submit">
             Send
           </button>
         )}

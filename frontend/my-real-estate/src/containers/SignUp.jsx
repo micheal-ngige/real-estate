@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { setAlert } from "../actions/alert";
 import { signup } from "../actions/auth";
@@ -26,12 +26,12 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
     else signup({ name, email, password, password2 });
   };
 
-  if (isAuthenticated) return <Redirect to="/" />;
+  if (isAuthenticated) return <Navigate to="/" />;
 
   return (
     <div className="auth">
       <Helmet>
-        <title>Realest Estate - Sign Up</title>
+        <title>Real Estate - Sign Up</title>
         <meta name="description" content="sign up page" />
       </Helmet>
       <h1 className="auth__title">Sign Up</h1>

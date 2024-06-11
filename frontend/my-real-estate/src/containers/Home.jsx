@@ -39,8 +39,8 @@ const Home = () => {
   return (
     <main className="home">
       <Helmet>
-        <title>Realest Estate - Home</title>
-        <meta name="description" content="Realest Estate Home Page" />
+        <title>Real Estate</title>
+        <meta name="description" content="Real Estate Home Page" />
       </Helmet>
       <section className="home__form">
         <ListingForm setListings={setListings} />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Loader from "react-loader-spinner";
+import { Oval } from "react-loader-spinner"; // Importing the named export
 import PropTypes from "prop-types";
 
 const ListingForm = (props) => {
@@ -47,7 +47,7 @@ const ListingForm = (props) => {
     setLoading(true);
     axios
       .post(
-        `${process.env.REACT_APP_API_URL}/api/listings/search`,
+        "http://localhost:8000/api/listings/search",
         {
           sale_type,
           price,
@@ -142,11 +142,11 @@ const ListingForm = (props) => {
               onChange={(e) => onChange(e)}
               value={days_listed}
             >
-              <option>1 of less</option>
-              <option>2 of less</option>
-              <option>5 of less</option>
-              <option>10 of less</option>
-              <option>20 of less</option>
+              <option>1 or less</option>
+              <option>2 or less</option>
+              <option>5 or less</option>
+              <option>10 or less</option>
+              <option>20 or less</option>
               <option>Any</option>
             </select>
           </div>
@@ -255,7 +255,7 @@ const ListingForm = (props) => {
         <div className="col-1-of-6">
           {loading ? (
             <div className="listingform__loader">
-              <Loader type="Oval" color="#424242" height={50} width={50} />
+              <Oval color="#424242" height={50} width={50} />
             </div>
           ) : (
             <button className="listingform__button listingform__button--primary">

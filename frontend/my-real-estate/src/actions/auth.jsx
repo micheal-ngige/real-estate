@@ -19,7 +19,7 @@ export const login = (email, password) => async (dispatch) => {
 
   try {
     const res = await axios.post(    
-    'http://localhost:8000/api/token',
+    'http://localhost:8000/api/token/',
       body,
       config
     );
