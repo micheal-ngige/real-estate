@@ -18,11 +18,11 @@ const card = (props) => {
         />
       </div>
       <p className="card__location">
-        {props.address}, {props.city}, {props.state}
+        {props.address}, {props.city}, {props.county}
       </p>
       <div className="row">
         <div className="col-2-of-3">
-          <p className="card__info">Price: ${numberWithCommas(props.price)}</p>
+          <p className="card__info">Price: Ksh {numberWithCommas(props.price)}</p>
           <p className="card__info">Bedrooms: {props.bedrooms}</p>
           <p className="card__info">Bathrooms: {props.bathrooms}</p>
         </div>
@@ -44,7 +44,7 @@ card.propTypes = {
   photo_main: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
-  state: PropTypes.string.isRequired,
+  county: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   bedrooms: PropTypes.number.isRequired,
   bathrooms: PropTypes.string.isRequired,

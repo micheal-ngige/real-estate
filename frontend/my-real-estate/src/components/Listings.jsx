@@ -12,7 +12,7 @@ const listings = ({ listings }) => {
           title={listing.title}
           address={listing.address}
           city={listing.city}
-          state={listing.state}
+          county={listing.county}
           price={listing.price}
           sale_type={listing.sale_type}
           home_type={listing.home_type}

@@ -87,7 +87,7 @@ const ListingDetail = () => {
       <div className="listingdetail__header">
         <h1 className="listingdetail__title">{listing.title}</h1>
         <p className="listingdetail__location">
-          {listing.city}, {listing.state}, {listing.zipcode}
+          {listing.city}, {listing.county}, {listing.zipcode}
         </p>
       </div>
       <div className="row">
@@ -128,7 +128,7 @@ const ListingDetail = () => {
             <li className="listingdetail__list__item">
               Home Type: {listing.home_type}
             </li>
-            <li className="listingdetail__list__item">Price: ${price}</li>
+            <li className="listingdetail__list__item">Price: Ksh {price}</li>
             <li className="listingdetail__list__item">
               Bedrooms: {listing.bedrooms}
             </li>
@@ -150,7 +150,7 @@ const ListingDetail = () => {
             </li>
             <li className="listingdetail__list__item">City: {listing.city}</li>
             <li className="listingdetail__list__item">
-              State: {listing.state}
+              County: {listing.county}
             </li>
             <li className="listingdetail__list__item">
               Zipcode: {listing.zipcode}

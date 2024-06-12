@@ -17,7 +17,7 @@ class Listing(models.Model):
     title = models.CharField(max_length=150)
     address = models.CharField(max_length=150)
     city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100)
+    county = models.CharField(max_length=100)
     zipcode = models.CharField(max_length=15)
     description = models.TextField(blank=True)
     sale_type = models.CharField(max_length=50, choices=SaleType.choices, default=SaleType.FOR_SALE)

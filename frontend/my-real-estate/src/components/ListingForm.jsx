@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const ListingForm = (props) => {
   const [formData, setFormData] = useState({
     sale_type: "For Sale",
-    price: "$0+",
+    price: "Ksh 0+",
     bedrooms: "0+",
     home_type: "House",
     bathrooms: "0+",
@@ -121,14 +121,14 @@ const ListingForm = (props) => {
               onChange={(e) => onChange(e)}
               value={price}
             >
-              <option>$0+</option>
-              <option>$200,000+</option>
-              <option>$400,000+</option>
-              <option>$600,000+</option>
-              <option>$800,000+</option>
-              <option>$1,000,000+</option>
-              <option>$1,200,000+</option>
-              <option>$1,500,000+</option>
+              <option>Ksh 0+</option>
+              <option>Ksh 200,000+</option>
+              <option>Ksh 400,000+</option>
+              <option>Ksh 600,000+</option>
+              <option>Ksh 800,000+</option>
+              <option>Ksh 1,000,000+</option>
+              <option>Ksh 1,200,000+</option>
+              <option>Ksh 1,500,000+</option>
               <option>Any</option>
             </select>
           </div>
