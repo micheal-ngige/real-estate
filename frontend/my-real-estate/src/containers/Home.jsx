@@ -38,6 +38,7 @@ const Home = () => {
 
   return (
     <main className="home">
+      <h1>Search your house here </h1>
       <Helmet>
         <title>Real Estate</title>
         <meta name="description" content="Real Estate Home Page" />
