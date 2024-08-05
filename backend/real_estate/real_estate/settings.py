@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
+from backend.keys import keys
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -87,9 +89,9 @@ WSGI_APPLICATION = 'real_estate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'realestate',
-        'USER': 'postgres',
-        'PASSWORD': 'Mike@12345',
+        'NAME': keys.name,
+        'USER': keys.user,
+        'PASSWORD': keys.db_password,
         'HOST': 'localhost'
     }
 }
@@ -97,8 +99,8 @@ DATABASES = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'mivasteel@gmail.com'
-EMAIL_HOST_PASSWORD = 'zqxi ybux hozc cymj'
+EMAIL_HOST_USER = keys.EMAIL
+EMAIL_HOST_PASSWORD = keys.HOST_PASSWORD
 EMAIL_USE_TLS = True
 
 # Password validation
