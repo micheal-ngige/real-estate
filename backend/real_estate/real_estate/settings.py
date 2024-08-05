@@ -13,11 +13,17 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
-from backend.keys import keys
+import sys
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+sys.path.append('/home/michael/Development/code/phase-6/real-estate/backend/keys')
+try:
+    import keys
+except ImportError as e:
+    raise ImportError("The 'keys' module could not be imported. Make sure the 'backend/keys' directory is correctly set up.") from e
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
